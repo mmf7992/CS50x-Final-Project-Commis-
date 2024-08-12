@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Change Password
+{% endblock %}
+
+{% block main %}
+    <div class="container mt-5">
+        <div class="d-flex justify-content-center">
+            <form action="/change" method="post" class="w-50">
+                <div class="mb-3">
+                    <input type="password" autocomplete="off" autofocus placeholder="Old Password" name="oldpw" id="oldpw" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <input type="password" autocomplete="off" placeholder="New Password" name="pw" id="pw" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <input type="password" autocomplete="off" placeholder="Confirm New Password" name="confirm" id="confirm" class="form-control">
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Change</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

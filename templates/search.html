@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Search Results
+{% endblock %}
+
+{% block main %}
+    <div class="container my-5">
+        <div class="d-flex flex-wrap justify-content-start">
+            {% for recipe in recipes %}
+            <div class="recipe-card-alt-wrapper">
+                <a href="{{ url_for('recipe', recipe_id=recipe.recipe_id) }}" class="recipe-card-alt-link">
+                    <div class="recipe-card-alt">
+                        <img src="{{ recipe.image_url }}" alt="{{ recipe.title }}" class="recipe-card-alt-img">
+                        <div class="recipe-card-alt-body">
+                            <h5 class="recipe-card-alt-title">{{ recipe.title }}</h5>
+                            <p class="recipe-card-alt-text">Difficulty: {{ recipe.difficulty }}</p>
+                            <p class="recipe-card-alt-text">Rating: {{ recipe.average_rating }}</p>
+                            <p class="recipe-card-alt-text">Posted by: {{ recipe.username }}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

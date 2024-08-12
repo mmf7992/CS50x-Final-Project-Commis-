@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+History
+{% endblock %}
+
+{% block main %}
+    <div class="container my-5">
+        <div class="d-flex flex-wrap justify-content-start">
+            {% for i in history %}
+            <div class="recipe-card-alt-wrapper">
+                <a href="{{ url_for('recipe', recipe_id=i.recipe_id) }}" class="recipe-card-alt-link">
+                    <div class="recipe-card-alt">
+                        <img src="{{ i.image_url }}" alt="{{ i.title }}" class="recipe-card-alt-img">
+                        <div class="recipe-card-alt-body">
+                            <h4 class="recipe-card-alt-title">{{ i.title }}</h4>
+                            <p class="recipe-card-alt-text">{{ i.difficulty }}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

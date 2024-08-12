@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Recipe Finder
+{% endblock %}
+
+{% block main %}
+    <div class="container my-5">
+        <div class="d-flex flex-wrap justify-content-start">
+            {% for recipe in recipes %}
+            <div class="recipe-card-wrapper">
+                <a href="{{ url_for('recipe', recipe_id=recipe.recipe_id) }}" class="recipe-card-link">
+                    <div class="recipe-card">
+                        <img src="{{ recipe.image_url }}" alt="{{ recipe.title }}" class="recipe-card-img">
+                        <div class="recipe-card-body">
+                            <h5 class="recipe-card-title">{{ recipe.title }}</h5>
+                            <p class="recipe-card-text">Difficulty: {{ recipe.difficulty }}</p>
+                            <p class="recipe-card-text">Rating: {{ recipe.average_rating | int }}</p>
+                            <p class="recipe-card-text">Posted by: {{ recipe.username }}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,213 @@
+html, body {
+    height: 100%; /* Ensure html and body cover the full viewport height */
+    margin: 0; /* Remove default margin */
+}
+
+body {
+    background-image: url('/static/marble.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the wrapper takes up at least the full viewport height */
+}
+
+main {
+    flex: 1; /* Allow main content to expand and push footer down */
+}
+
+footer {
+    background-color: #3d2c2e;
+    color: #f4f4f9 !important;
+    padding: 1rem; /* Increased padding for a less thin footer */
+    text-align: center;
+    margin-top: auto; /* Ensure footer stays at the bottom */
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#search-form {
+    max-width: 600px; /* Set a maximum width for the search form */
+    width: 100%; /* Allow the form to be responsive */
+    margin: 0 auto; /* Center the form horizontally */
+}
+
+#search-input {
+    border-radius: 20px; /* Make the input rounder */
+    width: 80%; /* Make the input field longer */
+    padding: 0.5rem 1rem; /* Add some padding */
+    box-shadow: none; /* Remove default box-shadow if any */
+    border: 1px solid #ccc; /* Add a border */
+}
+
+#search-form .btn {
+    border-radius: 20px; /* Match the button's border-radius with the input */
+    padding: 0.5rem 1rem; /* Adjust padding for a better appearance */
+}
+
+.logo-container {
+    max-height: 75px;
+    overflow: hidden;
+}
+
+/* Container that holds all the recipe cards */
+.d-flex {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of items */
+    justify-content: start; /* Align items to the start of the container */
+}
+
+/* Wrapper for each recipe card */
+.recipe-card-wrapper {
+    flex: 0 0 25%; /* Each card takes up 25% of the row width */
+    box-sizing: border-box;
+    padding: 15px; /* Space between cards */
+    border: 1px solid #000000;
+}
+
+/* Styles for the recipe card */
+.recipe-card {
+    border: 1px solid #ddd; /* Light border for visual separation */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Contain overflowing content */
+    text-align: center; /* Center-align the text */
+    height: 100%; /* Ensure the card takes up full height */
+    display: flex;
+    flex-direction: column;
+}
+
+.recipe-card-img {
+    width: 100%;
+    height: 200px; /* Set a fixed height for the image */
+    object-fit: cover; /* Crop the image to fit the container */
+}
+
+.recipe-card-body {
+    padding: 10px;
+    flex-grow: 1; /* Make the body take up remaining space */
+}
+
+.recipe-card-title {
+    font-size: 1.25rem;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.recipe-card-text {
+    font-size: 1rem;
+    color: #666;
+}
+
+.recipe-card-alt-wrapper {
+    margin: 10px;
+    width: 100%;
+}
+
+.recipe-card-alt-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.recipe-card-alt {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.recipe-card-alt:hover {
+    transform: scale(1.02);
+}
+
+.recipe-card-alt-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.recipe-card-alt-body {
+    padding: 15px;
+    flex-grow: 1;
+}
+
+.recipe-card-alt-title {
+    margin: 0 0 10px;
+    font-size: 1.25rem;
+}
+
+.recipe-card-alt-text {
+    margin: 0;
+    color: #555;
+}
+
+
+a {
+    text-decoration: underline !important;
+}
+
+a:hover {
+    color: #ffc857 !important;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Assuming default font */
+}
+
+header {
+    background-color: #d1495b;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+}
+
+#topbar {
+    background-color: #de9aa3;
+    color: #f4f4f9;
+    font-family: "Lora", serif;
+    font-weight: 550;
+    font-size: 1.35rem;
+}
+
+#logo {
+    height: 8rem;
+    width: 7rem;
+    margin-top: -1.4rem;
+}
+
+#logotext {
+    font-family: "Cedarville Cursive", cursive;
+    font-size: 1.4rem;
+}
+
+#loginlinks1 {
+    color: #f4f4f9 !important;
+}
+
+#loginlinks2 {
+    color: #f4f4f9 !important;
+}
+
+#footertext {
+    padding-top: 1rem;
+}
+
+#sidebar {
+    font-family: "Merriweather-black", serif;
+}
