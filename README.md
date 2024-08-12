@@ -1,7 +1,6 @@
 # Commis
 ## A Recipe Finder and Uploading Web Application
 #### Video Demo: <https://youtu.be/8B0mfFtzcpw>
-#### [Link](https://github.com/mmf7992/CS50x-Final-Project-Commis-/blob/main/templates/login.html)
 
 ### Overview
 Commis is a web application that allows users to discover, rate, and share recipes. It provides an intuitive interface for browsing recipes, viewing details, and engaging with other users through comments and ratings. Users can also upload their own recipes and maintain a history of their interactions with the platform.
